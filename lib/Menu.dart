@@ -1,6 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:assignment_app/main.dart';
 import 'package:flutter/material.dart';
-
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -24,12 +25,13 @@ class _MenuScreenState extends State<MenuScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 140,),
+                    const SizedBox(height: 140),
                     Container(
                       width: 70,
                       height: 70,
                       padding: const EdgeInsets.only(
-                        bottom: 10, ),
+                        bottom: 10,
+                      ),
                       child: const DecoratedBox(
                         decoration: ShapeDecoration(
                           shape: CircleBorder(),
@@ -37,7 +39,8 @@ class _MenuScreenState extends State<MenuScreen> {
                           image: DecorationImage(
                             fit: BoxFit.contain,
                             image: AssetImage('assets/icons/1.png'),
-                          )),
+                          ),
+                        ),
                       ),
                     ),
                     const Text(
@@ -45,17 +48,17 @@ class _MenuScreenState extends State<MenuScreen> {
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
-                        fontWeight: FontWeight.w700
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                      },
+                      onTap: () {},
                       child: const Text(
                         "View Profile",
                         style: TextStyle(
                           fontSize: 17,
-                          color: Colors.white54),
+                          color: Colors.white54,
+                        ),
                       ),
                     ),
                   ],
@@ -63,51 +66,84 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
             ),
             ListTile(
-              title: const Text("Home", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),),
+              title: const Text(
+                "Home",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const MyHomePage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MyHomePage(),
+                  ),
+                );
               },
             ),
             ListTile(
-              title: const Text("Edit Profile", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-              onTap: () {
-              },
+              title: const Text(
+                "Edit Profile",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              onTap: () {},
             ),
             ListTile(
-              title: const Text("Settings", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-              onTap: () {
-              },
+              title: const Text(
+                "Settings",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              onTap: () {},
             ),
-           const ListTile(
-              title: Text("Support", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-            ),
-            ListTile(
-              title: const Text("Assignment", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-              onTap: () {
-              },
-            ),
-            ListTile(
-              title: const Text("Grades", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-              onTap: () {
-              },
-            ),
-            const SizedBox(
-              height:
-              20.0,
-            ),
-            const SizedBox(
-              height:
-              100.0,
+            const ListTile(
+              title: Text(
+                "Support",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
             ListTile(
-              title: const Text("Logout", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
-              onTap: () {
-              },
+              title: const Text(
+                "Assignment",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              onTap: () {},
             ),
-            const SizedBox(
-              height:
-              20.0,
+            ListTile(
+              title: const Text(
+                "Grades",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              onTap: () {},
             ),
+            const SizedBox(height: 20),
+            const SizedBox(height: 100),
+            ListTile(
+              title: const Text(
+                "Logout",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              onTap: () {},
+            ),
+            const SizedBox(height: 20),
           ],
         ),
       ),

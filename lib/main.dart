@@ -23,16 +23,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key,}) : super(key: key);
+  const MyHomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final _drawerController = ZoomDrawerController();
 
   @override
@@ -43,8 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
         controller: _drawerController,
         style: DrawerStyle.defaultStyle,
         menuScreen: const MenuScreen(),
-        mainScreen: HomeScreen(zoomController: _drawerController,),
-        borderRadius: 24.0,
+        mainScreen: HomeScreen(
+          zoomController: _drawerController,
+        ),
+        borderRadius: 24,
         showShadow: false,
         angle: 0.0,
         slideWidth: MediaQuery.of(context).size.width * 0.65,
